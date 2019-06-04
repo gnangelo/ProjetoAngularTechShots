@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './login/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,10 +27,12 @@ import { routing } from './app.routing';
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [
-    ListarTechshotsService
+    ListarTechshotsService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

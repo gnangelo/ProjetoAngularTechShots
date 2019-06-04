@@ -3,20 +3,20 @@
       
       <h3 class="text-center mt-5">Login de Usuário</h3>
 
-      <form class="mt-2">
+      <div class="mt-2">
         <div class="form-group mt-5">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Email">
+          <input [(ngModel)]="usuario.nome" type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Senha">
+          <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha" placeholder="Senha">
         </div>
         <a class="text-dark" [routerLink]="['cadastrar-usuarios']">Cadastrar-se?</a>
         <div class="text-center mt-5">
-          <button type="submit" class="btn btn-outline-primary bg-dark">Logar</button>
+          <button type="submit" class="btn btn-outline-primary bg-dark" (click)="fazerLogin()">Logar</button>
         </div>                
         
-      </form>
+      </div>
     </div>
   </div>
