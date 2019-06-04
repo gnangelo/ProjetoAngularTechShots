@@ -19,11 +19,15 @@ export class AuthService {
 
         this.usuarioAutenticado = true;
         this.mostrarMenuEmitter.emit(true);
-        this.router.navigate(['/votar-techshots']);
+        this.router.navigate(['/']);
 
       } else {
         this.usuarioAutenticado = false;
         this.mostrarMenuEmitter.emit(false);
       }
+  }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
   }
 }

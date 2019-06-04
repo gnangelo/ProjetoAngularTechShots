@@ -1,3 +1,4 @@
+import { AuthGuards } from './guards/auth.guards';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './login/auth.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarUsuariosComponent } from './cadastrar-usuarios/cadastrar-usuarios.component';
 import { CadastrarTechshotsComponent } from './cadastrar-techshots/cadastrar-techshots.component';
 import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { routing } from './app.routing';
     ListarTechshotsComponent,
     LoginComponent,
     CadastrarUsuariosComponent,
-    CadastrarTechshotsComponent
+    CadastrarTechshotsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { routing } from './app.routing';
   ],
   providers: [
     ListarTechshotsService,
-    AuthService
+    AuthService,
+    AuthGuards
   ],
   bootstrap: [AppComponent]
 })
