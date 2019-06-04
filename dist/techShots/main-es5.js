@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class=\"navbar navbar-dark bg-dark\">\n        <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\n        <nav class=\"my-2 my-md-0 mr-md-3\">\n          <!-- <a class=\"p-2 text-dark\" [routerLink]=\"['login']\">Logar</a> -->\n          <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\">Criar TechShots</a>\n          <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\">Votar</a>\n          <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\">Estatistica</a>\n          \n        </nav>\n        <a class=\"btn btn-outline-primary\" [routerLink]=\"['/']\">Sair</a>\n  </nav>\n     \n</header>  \n\n<main>\n  <div class=\"container mt-5\">  \n    <router-outlet></router-outlet>    \n  </div>\n</main>\n\n"
+module.exports = "<header>\r\n  <nav class=\"navbar navbar-dark bg-dark\" *ngIf=\"mostrarMenu\">\r\n        <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\r\n        <nav class=\"my-2 my-md-0 mr-md-3\" >\r\n          <!-- <a class=\"p-2 text-light\" [routerLink]=\"['login']\">Logar</a> -->\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\">Criar TechShots</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\">Votar</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\">Estatistica</a>\r\n          \r\n        </nav>\r\n        <a class=\"btn btn-outline-primary bg-dark\" [routerLink]=\"['login']\">Sair</a>\r\n  </nav>\r\n     \r\n</header>  \r\n\r\n<main>\r\n  <div class=\"container mt-5\">  \r\n    <router-outlet></router-outlet>    \r\n  </div>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<header>\n  <nav class=\"navbar navbar-dark bg-dark\">\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n        <div class=\"container criar-centro \">\n            <div class=\"col-md-12\">  \n\n                <h4 class=\"text-center mt-5\">Cadastro de Tech-Shots</h4>\n\n                <form class=\"col-md-8 offset-md-2 mt-2\" action=\"/techshots\" method=\"POST\">\n                                                    \n                    <div class=\"form-group mt-5\">\n                        <label for=\"tituloTechShot\">Titulo da Tech Shot</label>\n                        <input type=\"text\" class=\"form-control\" name=\"titulo\" id=\"titulo\" placeholder=\"Titulo da TechShot\">\n                    </div>\n                    \n                    <div class=\"form-group\">\n                        <label for=\"cadTechShots\">Descrição</label>\n                        <textarea class=\"form-control\" name=\"descricao\" id=\"descricao\" rows=\"3\"></textarea>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"palestrante\">Palestrante</label>\n                        <input type=\"text\" class=\"form-control\" name=\"palestrante\" id=\"palestrante\" placeholder=\"Nome do Palestrante\">\n                    </div>\n                    \n                    <div class=\"text-center mt-5\">\n                        <button type=\"submit\" class=\"btn btn-primary mr-2\">Salvar</button>\n                        <button type=\"#\" class=\"btn btn-primary\">Cancelar</button>\n                    </div>                \n\n                </form> \n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n        <div class=\"container criar-centro \">\n            <div class=\"col-md-12\">  \n\n                <h4 class=\"text-center mt-5\">Cadastro de Tech-Shots</h4>\n\n                <form class=\"col-md-8 offset-md-2 mt-2\" action=\"/techshots\" method=\"POST\">\n                                                    \n                    <div class=\"form-group mt-5\">\n                        <label for=\"tituloTechShot\">Titulo da Tech Shot</label>\n                        <input type=\"text\" class=\"form-control\" name=\"titulo\" id=\"titulo\" placeholder=\"Titulo da TechShot\">\n                    </div>\n                    \n                    <div class=\"form-group\">\n                        <label for=\"cadTechShots\">Descrição</label>\n                        <textarea class=\"form-control\" name=\"descricao\" id=\"descricao\" rows=\"3\"></textarea>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"palestrante\">Palestrante</label>\n                        <input type=\"text\" class=\"form-control\" name=\"palestrante\" id=\"palestrante\" placeholder=\"Nome do Palestrante\">\n                    </div>\n                    \n                    <div class=\"text-center mt-5\">\n                        <button type=\"submit\" class=\"btn btn-outline-primary bg-darke bg-dark mr-2\">Salvar</button>\n                        <button type=\"#\" class=\"btn btn-outline-primary bg-dark bg-dark\">Voltar</button>\n                    </div>                \n\n                </form> \n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -52,7 +52,18 @@ module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n       
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container col-md-12 mt-3\">\n  <div class=\"col-md-6 offset-md-3\">\n    \n    <form class=\"mt-5 \">\n      <h3 class=\"text-center\">Cadastro de Usuário</h3>\n\n      <div class=\"form-group\">\n          <label for=\"nome\">Nome</label>\n          <input type=\"text\" class=\"form-control\" id=\"nome\" placeholder=\"Nome\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"email\">Email</label>\n          <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Senha</label>\n          <input type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\n      </div>\n\n      <div class=\"row col\">\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">Usuário</label>\n          </div>\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n              <label class=\"form-check-label\" for=\"exampleRadios2\">Administrador</label>\n          </div>\n      </div>\n      <div class=\"text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-primary\">Cadastrar</button>\n      </div>                \n\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"container col-md-12 mt-3\">\n  <div class=\"col-md-6 offset-md-3\">\n    \n    <form class=\"mt-5 \">\n      <h3 class=\"text-center\">Cadastro de Usuário</h3>\n\n      <div class=\"form-group\">\n          <label for=\"nome\">Nome</label>\n          <input type=\"text\" class=\"form-control\" id=\"nome\" placeholder=\"Nome\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"email\">Email</label>\n          <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Senha</label>\n          <input type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\n      </div>\n\n      <div class=\"row col\">\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">Usuário</label>\n          </div>\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n              <label class=\"form-check-label\" for=\"exampleRadios2\">Administrador</label>\n          </div>\n      </div>\n      <div class=\"text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark bg-dark\">Cadastrar</button>\n      </div>                \n\n    </form>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/home/home.component.html":
+/*!********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/home/home.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"container\">\n  <div class=\"text-center\">\n    <h1>Bem vindo ao Tech Shots!</h1>\n    <h5>O você deseja fazer?</h5>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -74,7 +85,7 @@ module.exports = "<div class=\"container mt-3\">\n  <div class=\"col-md-12\">\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-10 container \">\n    <div class=\"col-md-6 offset-md-3 login-centro\">\n      \n      <h3 class=\"text-center mt-5\">Login de Usuário</h3>\n\n      <form class=\"mt-2\">\n        <div class=\"form-group mt-5\">\n          <label for=\"email\">Email</label>\n          <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Senha</label>\n          <input type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\n        </div>\n        <a [routerLink]=\"['cadastrar-usuarios']\">Cadastrar-se?</a>\n        <div class=\"text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-primary\">Logar</button>\n        </div>                \n        \n      </form>\n    </div>\n  </div>"
+module.exports = "<div class=\"col-md-10 container \">\r\n    <div class=\"col-md-6 offset-md-3 login-centro\">\r\n      \r\n      <h3 class=\"text-center mt-5\">Login de Usuário</h3>\r\n\r\n      <div class=\"mt-2\">\r\n        <div class=\"form-group mt-5\">\r\n          <label for=\"email\">Email</label>\r\n          <input [(ngModel)]=\"usuario.nome\" type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Senha</label>\r\n          <input [(ngModel)]=\"usuario.senha\" type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\r\n        </div>\r\n        <a class=\"text-dark\" [routerLink]=\"['cadastrar-usuarios']\">Cadastrar-se?</a>\r\n        <div class=\"text-center mt-5\">\r\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark\" (click)=\"fazerLogin()\">Logar</button>\r\n        </div>                \r\n        \r\n      </div>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -85,7 +96,7 @@ module.exports = "<div class=\"col-md-10 container \">\n    <div class=\"col-md-
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container mt-2S\">\n  <div class=\"col-md-12\">\n    \n\n    <div class=\"container col-md-12 mt-5\">\n        \n        <h4 class=\"text-center\">Votar na Tech Shots favorita.</h4>                \n\n        <div class=\"row mt-3\">\n            <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-6\">\n                <div class=\"card\">\n                        <div class=\"card-body\">\n                        <h4 class=\"card-title\">Titulo: {{tech.titulo}}</h4>\n                        <p class=\"card-text\">Id: {{tech.id}}</p>\n                        <p class=\"card-text\">Descrição: {{tech.descricao}}</p>\n                        <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p>                    \n                    </div>\n                    <a href=\"#\" class=\"btn btn-primary text-center\">Votar</a>\n                </div>\n            </div>                                     \n        </div>        \n    </div>\n  </div>  \n</div>"
+module.exports = "\r\n<div class=\"container mt-2S\">\r\n  <div class=\"col-md-12\">\r\n    \r\n\r\n    <div class=\"container col-md-12 mt-5\">\r\n        \r\n        <h4 class=\"text-center\">Votar na Tech Shots favorita.</h4>                \r\n\r\n        <div class=\"row mt-3\">\r\n            <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-6\">\r\n                <div class=\"card mb-3\">\r\n                    <div class=\"card-body\">\r\n                        <h4 class=\"card-title\">Titulo: {{tech.titulo}}</h4>\r\n                        <p class=\"card-text\">Id: {{tech.id}}</p>\r\n                        <p class=\"card-text\">Descrição: {{tech.descricao}}</p>\r\n                        <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p> \r\n                        <a href=\"#\" class=\"btn btn-outline-primary bg-dark text-center\">Votar</a>                   \r\n                    </div>                    \r\n                </div>\r\n            </div>                                     \r\n        </div>        \r\n    </div>\r\n  </div>  \r\n</div>"
 
 /***/ }),
 
@@ -111,19 +122,28 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _login_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/auth.service */ "./src/app/login/auth.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(authService) {
+        this.authService = authService;
         this.title = 'techShots';
+        this.mostrarMenu = false;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.mostrarMenuEmitter.subscribe(function (mostrar) { return _this.mostrarMenu = mostrar; });
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_login_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -143,17 +163,25 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
-/* harmony import */ var _listar_techshots_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./listar-techshots.service */ "./src/app/listar-techshots.service.ts");
-/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
-/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guards/auth.guards */ "./src/app/guards/auth.guards.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _login_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/auth.service */ "./src/app/login/auth.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
+/* harmony import */ var _listar_techshots_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./listar-techshots.service */ "./src/app/listar-techshots.service.ts");
+/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
+/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+
+
+
+
 
 
 
@@ -170,24 +198,28 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_5__["VotarTechshotsComponent"],
-                _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_7__["ListarTechshotsComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"],
-                _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_9__["CadastrarUsuariosComponent"],
-                _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_10__["CadastrarTechshotsComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_8__["VotarTechshotsComponent"],
+                _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_10__["ListarTechshotsComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
+                _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_12__["CadastrarUsuariosComponent"],
+                _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_13__["CadastrarTechshotsComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_15__["HomeComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_11__["routing"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _app_routing__WEBPACK_IMPORTED_MODULE_14__["routing"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
             ],
             providers: [
-                _listar_techshots_service__WEBPACK_IMPORTED_MODULE_6__["ListarTechshotsService"]
+                _listar_techshots_service__WEBPACK_IMPORTED_MODULE_9__["ListarTechshotsService"],
+                _login_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+                _guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -207,12 +239,16 @@ var AppModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routing", function() { return routing; });
-/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
-/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
-/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
-/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guards/auth.guards */ "./src/app/guards/auth.guards.ts");
+/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
+/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
+/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
+/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
 
 
 
@@ -220,14 +256,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var APP_ROUTES = [
-    { path: 'listar-techshots', component: _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_1__["ListarTechshotsComponent"] },
-    { path: 'votar-techshots', component: _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_2__["VotarTechshotsComponent"] },
-    { path: 'cadastrar-techshots', component: _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_3__["CadastrarTechshotsComponent"] },
-    { path: 'cadastrar-usuarios', component: _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_0__["CadastrarUsuariosComponent"] },
-    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] },
-    { path: '', component: _login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] }
+    { path: 'listar-techshots', component: _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_3__["ListarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
+    { path: 'votar-techshots', component: _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_4__["VotarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
+    { path: 'cadastrar-techshots', component: _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_5__["CadastrarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
+    { path: 'cadastrar-usuarios', component: _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_2__["CadastrarUsuariosComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
+    { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
+    { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_0__["HomeComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] }
 ];
-var routing = _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(APP_ROUTES);
+var routing = _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(APP_ROUTES);
 
 
 /***/ }),
@@ -322,6 +358,94 @@ var CadastrarUsuariosComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/guards/auth.guards.ts":
+/*!***************************************!*\
+  !*** ./src/app/guards/auth.guards.ts ***!
+  \***************************************/
+/*! exports provided: AuthGuards */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuards", function() { return AuthGuards; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _login_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../login/auth.service */ "./src/app/login/auth.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var AuthGuards = /** @class */ (function () {
+    function AuthGuards(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthGuards.prototype.canActivate = function (route, state) {
+        if (this.authService.usuarioEstaAutenticado()) {
+            return true;
+        }
+        this.router.navigate(['/login']);
+        return false;
+    };
+    AuthGuards = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_login_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], AuthGuards);
+    return AuthGuards;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/home/home.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/home/home.component.ts ***!
+  \****************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/index.js!./src/app/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/listar-techshots.service.ts":
 /*!*********************************************!*\
   !*** ./src/app/listar-techshots.service.ts ***!
@@ -366,7 +490,7 @@ var ListarTechshotsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpc3Rhci10ZWNoc2hvdHMvbGlzdGFyLXRlY2hzaG90cy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".card-body{\r\n    line-height: 18px;    \r\n    background-color: azure;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGlzdGFyLXRlY2hzaG90cy9saXN0YXItdGVjaHNob3RzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakIsdUJBQXVCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvbGlzdGFyLXRlY2hzaG90cy9saXN0YXItdGVjaHNob3RzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZC1ib2R5e1xyXG4gICAgbGluZS1oZWlnaHQ6IDE4cHg7ICAgIFxyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYXp1cmU7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -412,6 +536,57 @@ var ListarTechshotsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/login/auth.service.ts":
+/*!***************************************!*\
+  !*** ./src/app/login/auth.service.ts ***!
+  \***************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+var AuthService = /** @class */ (function () {
+    function AuthService(router) {
+        this.router = router;
+        this.usuarioAutenticado = false;
+        this.mostrarMenuEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    AuthService.prototype.fazerLogin = function (usuario) {
+        if (usuario.nome === 'gngelo@gmail.com' &&
+            usuario.senha === '123') {
+            this.usuarioAutenticado = true;
+            this.mostrarMenuEmitter.emit(true);
+            this.router.navigate(['/']);
+        }
+        else {
+            this.usuarioAutenticado = false;
+            this.mostrarMenuEmitter.emit(false);
+        }
+    };
+    AuthService.prototype.usuarioEstaAutenticado = function () {
+        return this.usuarioAutenticado;
+    };
+    AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], AuthService);
+    return AuthService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/login/login.component.css":
 /*!*******************************************!*\
   !*** ./src/app/login/login.component.css ***!
@@ -434,23 +609,52 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ "./src/app/login/auth.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _usuario__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./usuario */ "./src/app/login/usuario.ts");
+
+
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
+    function LoginComponent(authService) {
+        this.authService = authService;
+        this.usuario = new _usuario__WEBPACK_IMPORTED_MODULE_3__["Usuario"]();
     }
     LoginComponent.prototype.ngOnInit = function () {
     };
+    LoginComponent.prototype.fazerLogin = function () {
+        this.authService.fazerLogin(this.usuario);
+    };
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-login',
             template: __webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/index.js!./src/app/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/login/usuario.ts":
+/*!**********************************!*\
+  !*** ./src/app/login/usuario.ts ***!
+  \**********************************/
+/*! exports provided: Usuario */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Usuario", function() { return Usuario; });
+var Usuario = /** @class */ (function () {
+    function Usuario() {
+    }
+    return Usuario;
 }());
 
 
@@ -464,7 +668,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZvdGFyLXRlY2hzaG90cy92b3Rhci10ZWNoc2hvdHMuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\r\n.card-body{\r\n    line-height: 18px;    \r\n    background-color: azure;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdm90YXItdGVjaHNob3RzL3ZvdGFyLXRlY2hzaG90cy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLGlCQUFpQjtJQUNqQix1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC92b3Rhci10ZWNoc2hvdHMvdm90YXItdGVjaHNob3RzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLmNhcmQtYm9keXtcclxuICAgIGxpbmUtaGVpZ2h0OiAxOHB4OyAgICBcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGF6dXJlO1xyXG59Il19 */"
 
 /***/ }),
 
