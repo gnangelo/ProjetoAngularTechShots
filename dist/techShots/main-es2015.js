@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <nav class=\"navbar navbar-dark bg-dark\" *ngIf=\"mostrarMenu\">\r\n        <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\r\n        <nav class=\"my-2 my-md-0 mr-md-3\" >\r\n          <!-- <a class=\"p-2 text-light\" [routerLink]=\"['login']\">Logar</a> -->\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\">Criar TechShots</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\">Votar</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\">Estatistica</a>\r\n          \r\n        </nav>\r\n        <a class=\"btn btn-outline-primary bg-dark\" [routerLink]=\"['login']\">Sair</a>\r\n  </nav>\r\n     \r\n</header>  \r\n\r\n<main>\r\n  <div class=\"container mt-5\">  \r\n    <router-outlet></router-outlet>    \r\n  </div>\r\n</main>\r\n\r\n"
+module.exports = "<header>\r\n  <nav class=\"navbar navbar-dark bg-dark\" *ngIf=\"mostrarMenu\">\r\n        <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\r\n        <nav class=\"my-2 my-md-0 mr-md-3\" >\r\n          <!-- <a class=\"p-2 text-light\" [routerLink]=\"['login']\">Logar</a> -->\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\" *ngIf=\"mostrarCriar\">Criar TechShots</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\" *ngIf=\"mostrarVotar\">Votar</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\" *ngIf=\"mostrarListar\">Estatistica</a>\r\n          \r\n        </nav>\r\n        <a class=\"btn btn-outline-primary bg-dark\" [routerLink]=\"['login']\">Sair</a>\r\n  </nav>\r\n     \r\n</header>  \r\n\r\n<main>\r\n  <div class=\"container mt-5\">  \r\n    <router-outlet></router-outlet>    \r\n  </div>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -132,9 +132,15 @@ let AppComponent = class AppComponent {
         this.authService = authService;
         this.title = 'techShots';
         this.mostrarMenu = false;
+        this.mostrarCriar = false;
+        this.mostrarVotar = false;
+        this.mostrarListar = false;
     }
     ngOnInit() {
         this.authService.mostrarMenuEmitter.subscribe(mostrar => this.mostrarMenu = mostrar);
+        this.authService.mostrarCriarEmitter.subscribe(mostrar => this.mostrarCriar = mostrar);
+        this.authService.mostrarVotarEmitter.subscribe(mostrar => this.mostrarVotar = mostrar);
+        this.authService.mostrarListarEmitter.subscribe(mostrar => this.mostrarListar = mostrar);
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -543,17 +549,34 @@ let AuthService = class AuthService {
         this.router = router;
         this.usuarioAutenticado = false;
         this.mostrarMenuEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.mostrarCriarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.mostrarVotarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.mostrarListarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     fazerLogin(usuario) {
         if (usuario.nome === 'gngelo@gmail.com' &&
             usuario.senha === '123') {
-            this.usuarioAutenticado = true;
-            this.mostrarMenuEmitter.emit(true);
-            this.router.navigate(['/']);
+            if (usuario.tipoUsuario === 'usuario') {
+                this.usuarioAutenticado = true;
+                this.mostrarMenuEmitter.emit(true);
+                this.mostrarVotarEmitter.emit(true);
+                this.mostrarListarEmitter.emit(true);
+                this.router.navigate(['/']);
+            }
+            if (usuario.tipoUsuario === 'admin') {
+                this.usuarioAutenticado = true;
+                this.mostrarMenuEmitter.emit(true);
+                this.mostrarCriarEmitter.emit(true);
+                this.mostrarListarEmitter.emit(true);
+                this.router.navigate(['/']);
+            }
         }
         else {
             this.usuarioAutenticado = false;
             this.mostrarMenuEmitter.emit(false);
+            this.mostrarCriarEmitter.emit(false);
+            this.mostrarVotarEmitter.emit(false);
+            this.mostrarListarEmitter.emit(false);
         }
     }
     usuarioEstaAutenticado() {
@@ -635,6 +658,9 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Usuario", function() { return Usuario; });
 class Usuario {
+    constructor() {
+        this.tipoUsuario = 'admin';
+    }
 }
 
 
