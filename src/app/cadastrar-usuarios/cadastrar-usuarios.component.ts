@@ -1,4 +1,7 @@
+
+import { Usuario } from './usuario-models';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-cadastrar-usuarios',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarUsuariosComponent implements OnInit {
 
+  private usuario: Usuario = new Usuario();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  cadastrarUsuario() {
+    console.log(this.usuario);
+  }
+
 
 }

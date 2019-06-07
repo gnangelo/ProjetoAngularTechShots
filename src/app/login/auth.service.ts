@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from './usuario';
+import { Usuario } from './../cadastrar-usuarios/usuario-models';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -8,11 +8,12 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private usuarioAutenticado: boolean = false;
+  private usuarioAutenticado = false;
   mostrarMenuEmitter = new EventEmitter<boolean>();
   mostrarCriarEmitter = new EventEmitter<boolean>();
   mostrarVotarEmitter = new EventEmitter<boolean>();
   mostrarListarEmitter = new EventEmitter<boolean>();
+  mostrarCadUsuEmitter = new EventEmitter<boolean>();
 
 
   constructor( private router: Router) { }
@@ -27,6 +28,7 @@ export class AuthService {
           this.mostrarMenuEmitter.emit(true);
           this.mostrarVotarEmitter.emit(true);
           this.mostrarListarEmitter.emit(true);
+          this.mostrarCadUsuEmitter.emit(false);
           this.router.navigate(['/']);
         }
 
@@ -35,6 +37,7 @@ export class AuthService {
           this.mostrarMenuEmitter.emit(true);
           this.mostrarCriarEmitter.emit(true);
           this.mostrarListarEmitter.emit(true);
+          this.mostrarCadUsuEmitter.emit(false);
           this.router.navigate(['/']);
         }
 
@@ -44,6 +47,7 @@ export class AuthService {
         this.mostrarCriarEmitter.emit(false);
         this.mostrarVotarEmitter.emit(false);
         this.mostrarListarEmitter.emit(false);
+        this.mostrarCadUsuEmitter.emit(true);
       }
   }
 

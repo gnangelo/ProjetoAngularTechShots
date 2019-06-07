@@ -9,13 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'techShots';
 
-  mostrarMenu: boolean = false;
-  mostrarCriar: boolean = false;
-  mostrarVotar: boolean = false;
-  mostrarListar: boolean = false;
+  mostrarMenu = false;
+  mostrarCriar = false;
+  mostrarVotar = false;
+  mostrarListar = false;
+  mostrarCadUsu = false;
 
   constructor( private authService: AuthService ) {}
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     this.authService.mostrarMenuEmitter.subscribe(
       mostrar => this.mostrarMenu = mostrar
@@ -28,6 +30,9 @@ export class AppComponent {
     );
     this.authService.mostrarListarEmitter.subscribe(
       mostrar => this.mostrarListar = mostrar
+    );
+    this.authService.mostrarCadUsuEmitter.subscribe(
+      mostrar => this.mostrarCadUsu = mostrar
     );
   }
 }

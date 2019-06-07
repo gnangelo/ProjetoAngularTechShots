@@ -10,7 +10,7 @@ export class ListarUsuariosService {
 
   constructor( private http: HttpClient ) { }
 
-  registrar() {
-    return this.http.get<any[]>(`${this.usuariosUrl}`);
+  logarGet(logar: any) {
+    return this.http.get( this.usuariosUrl, logar);
   }
 }

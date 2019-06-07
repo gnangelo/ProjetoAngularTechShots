@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
     { path: 'listar-techshots', component: ListarTechshotsComponent, canActivate: [AuthGuards]},
     { path: 'votar-techshots', component: VotarTechshotsComponent, canActivate: [AuthGuards]},
     { path: 'cadastrar-techshots', component: CadastrarTechshotsComponent, canActivate: [AuthGuards]},
-    { path: 'cadastrar-usuarios', component: CadastrarUsuariosComponent, canActivate: [AuthGuards]},
+    { path: 'cadastrar-usuarios', component: CadastrarUsuariosComponent},
     { path: 'login', component: LoginComponent},
     { path: '', component: HomeComponent, canActivate: [AuthGuards]}
 ];

@@ -8,6 +8,7 @@ import { ListarTechshotsService } from './../listar-techshots.service';
   styleUrls: ['./votar-techshots.component.css']
 })
 export class VotarTechshotsComponent implements OnInit {
+
   // mockLista = [
   //   {
   //     titulo: 'lista',
@@ -25,27 +26,16 @@ export class VotarTechshotsComponent implements OnInit {
   //     titulo: 'lista',
   //     descricao: 'lista, lista, lista',
   //     palestrante: 'antonio',
-  //     id: 2
+  //     id: 3
   //   },
   //   {
   //     titulo: 'liskkkkkkkkkkta',
   //     descricao: 'litudokkkkkkkkkksta, lista, lista',
   //     palestrante: 'jose',
-  //     id: 3
-  //   },
-  //   {
-  //     titulo: 'lista',
-  //     descricao: 'lista, lista, lista',
-  //     palestrante: 'antonio',
-  //     id: 2
-  //   },
-  //   {
-  //     titulo: 'liskkkkkkkkkkta',
-  //     descricao: 'litudokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksta, lista, lista',
-  //     palestrante: 'jose',
-  //     id: 3
+  //     id: 4
   //   }
   // ];
+
   listatechshots: Array<any>;
 
   constructor( private listarTechshotsService: ListarTechshotsService) { }
@@ -54,8 +44,12 @@ export class VotarTechshotsComponent implements OnInit {
     this.listar();
   }
 
+  // listar todas as techshots para serem votada
   listar() {
     this.listarTechshotsService.listarTechhosts().subscribe(dados => this.listatechshots = dados);
   }
+
+  // vota na techshot preferida
+  votarTech() {}
 
 }

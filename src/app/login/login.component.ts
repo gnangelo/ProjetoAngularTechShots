@@ -1,6 +1,7 @@
+import { ListarUsuariosService } from './listar-usuarios.service';
 import { AuthService } from './auth.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './usuario';
+import { Usuario } from './../cadastrar-usuarios/usuario-models';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,12 @@ import { Usuario } from './usuario';
 export class LoginComponent implements OnInit {
 
   private usuario: Usuario = new Usuario();
+  listausuarios: Array<any>;
 
   constructor( private authService: AuthService) { }
 
   ngOnInit() {
+    this.fazerLogin();
   }
 
   fazerLogin() {

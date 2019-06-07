@@ -1,3 +1,4 @@
+import { ListarUsuariosService } from './login/listar-usuarios.service';
 import { AuthGuards } from './guards/auth.guards';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './login/auth.service';
@@ -36,7 +37,8 @@ import { HomeComponent } from './home/home.component';
   providers: [
     ListarTechshotsService,
     AuthService,
-    AuthGuards
+    AuthGuards,
+    ListarUsuariosService
   ],
   bootstrap: [AppComponent]
 })

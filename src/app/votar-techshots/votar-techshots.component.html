@@ -8,14 +8,15 @@
         <h4 class="text-center">Votar na Tech Shots favorita.</h4>                
 
         <div class="row mt-3">
-            <div *ngFor="let tech of listatechshots" class="col-sm-6">
+            <div *ngFor="let tech of listatechshots" class="col-sm-12">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h4 class="card-title">Titulo: {{tech.titulo}}</h4>
-                        <p class="card-text">Id: {{tech.id}}</p>
-                        <p class="card-text">Descrição: {{tech.descricao}}</p>
+                        <h4 class="card-title">{{tech.titulo}}</h4>
+                        <p class="card-text">Numero: {{tech.id}}</p>
+                        <p class="card-text">{{tech.descricao}}</p>
                         <p class="card-title">Palestrante: {{tech.palestrante}}</p> 
-                        <a href="#" class="btn btn-outline-primary bg-dark text-center">Votar</a>                   
+                        
+                        <button type="submit" class="btn btn-outline-primary bg-dark text-center" (click)="votarTech()">Votar</button>                   
                     </div>                    
                 </div>
             </div>                                     
