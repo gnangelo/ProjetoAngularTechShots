@@ -9,9 +9,9 @@
         <div *ngFor="let tech of listatechshots" class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Titulo: {{tech.titulo}}</h5>
-              <p class="card-text">Id: {{tech.id}}</p>
-              <p class="card-text">Descrição: {{tech.descricao}}</p>
+              <h5 class="card-title">{{tech.titulo}}</h5>
+              <p class="card-text">Tech Shot nº: {{tech.id}}</p>
+              <p class="card-text">{{tech.descricao}}</p>
               <p class="card-title">Palestrante: {{tech.palestrante}}</p>
               <p class="card-title">Quantidade de votos: {{tech.numeroVotos}}</p>
             </div>

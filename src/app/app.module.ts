@@ -16,6 +16,7 @@ import { CadastrarUsuariosComponent } from './cadastrar-usuarios/cadastrar-usuar
 import { CadastrarTechshotsComponent } from './cadastrar-techshots/cadastrar-techshots.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { EditarTechshotsComponent } from './editar-techshots/editar-techshots.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     CadastrarUsuariosComponent,
     CadastrarTechshotsComponent,
-    HomeComponent
+    HomeComponent,
+    EditarTechshotsComponent
   ],
   imports: [
     BrowserModule,

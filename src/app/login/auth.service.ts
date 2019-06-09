@@ -13,6 +13,7 @@ export class AuthService {
   mostrarCriarEmitter = new EventEmitter<boolean>();
   mostrarVotarEmitter = new EventEmitter<boolean>();
   mostrarListarEmitter = new EventEmitter<boolean>();
+  mostrarEditarEmitter = new EventEmitter<boolean>();
   mostrarCadUsuEmitter = new EventEmitter<boolean>();
 
 
@@ -37,6 +38,7 @@ export class AuthService {
           this.mostrarMenuEmitter.emit(true);
           this.mostrarCriarEmitter.emit(true);
           this.mostrarListarEmitter.emit(true);
+          this.mostrarEditarEmitter.emit(true);
           this.mostrarCadUsuEmitter.emit(false);
           this.router.navigate(['/']);
         }
@@ -47,6 +49,7 @@ export class AuthService {
         this.mostrarCriarEmitter.emit(false);
         this.mostrarVotarEmitter.emit(false);
         this.mostrarListarEmitter.emit(false);
+        this.mostrarEditarEmitter.emit(false);
         this.mostrarCadUsuEmitter.emit(true);
       }
   }

@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <nav class=\"navbar navbar-dark bg-dark\" *ngIf=\"mostrarMenu\">\r\n        <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\r\n        <nav class=\"my-2 my-md-0 mr-md-3\" >\r\n          <!-- <a class=\"p-2 text-light\" [routerLink]=\"['login']\">Logar</a> -->\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\" *ngIf=\"mostrarCriar\">Criar TechShots</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\" *ngIf=\"mostrarVotar\">Votar</a>\r\n          <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\" *ngIf=\"mostrarListar\">Estatistica</a>\r\n          \r\n        </nav>\r\n        <a class=\"btn btn-outline-primary bg-dark\" [routerLink]=\"['login']\">Sair</a>\r\n  </nav>\r\n     \r\n</header>  \r\n\r\n<main>\r\n  <div class=\"container mt-5\">  \r\n    <router-outlet></router-outlet>    \r\n  </div>\r\n</main>\r\n\r\n"
+module.exports = "\r\n<nav class=\"navbar navbar-dark bg-dark\" >\r\n  <h5 class=\"my-0 mr-md-auto font-weight-normal text-light\" [routerLink]=\"['/']\">Tech Shots</h5>\r\n  <nav class=\"my-2 my-md-0 mr-md-3\" >\r\n    <!-- <a class=\"p-2 text-light\" [routerLink]=\"['login']\">Logar</a> -->\r\n    <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-usuarios']\" *ngIf=\"mostrarCadUsu\">Cadastrar-se</a>\r\n    <a class=\"p-2 text-light\" [routerLink]=\"['cadastrar-techshots']\" *ngIf=\"mostrarCriar\">Criar TechShots</a>\r\n    <a class=\"p-2 text-light\" [routerLink]=\"['votar-techshots']\" *ngIf=\"mostrarVotar\">Votar</a>\r\n    <a class=\"p-2 text-light\" [routerLink]=\"['listar-techshots']\" *ngIf=\"mostrarListar\">Estatistica</a>\r\n              \r\n  </nav>\r\n  <a class=\"btn btn-outline-primary bg-dark\" [routerLink]=\"['login']\">Sair</a>\r\n</nav>\r\n\r\n<main>\r\n  <div class=\"container mt-5\">  \r\n    <router-outlet></router-outlet>    \r\n  </div>\r\n</main>\r\n\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<header>\r\n  <nav class=\"navbar navbar-dark bg-dark\" *ngIf=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n        <div class=\"container criar-centro \">\n            <div class=\"col-md-12\">  \n\n                <h4 class=\"text-center mt-5\">Cadastro de Tech-Shots</h4>\n\n                <form class=\"col-md-8 offset-md-2 mt-2\" action=\"/techshots\" method=\"POST\">\n                                                    \n                    <div class=\"form-group mt-5\">\n                        <label for=\"tituloTechShot\">Titulo da Tech Shot</label>\n                        <input type=\"text\" class=\"form-control\" name=\"titulo\" id=\"titulo\" placeholder=\"Titulo da TechShot\">\n                    </div>\n                    \n                    <div class=\"form-group\">\n                        <label for=\"cadTechShots\">Descrição</label>\n                        <textarea class=\"form-control\" name=\"descricao\" id=\"descricao\" rows=\"3\"></textarea>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"palestrante\">Palestrante</label>\n                        <input type=\"text\" class=\"form-control\" name=\"palestrante\" id=\"palestrante\" placeholder=\"Nome do Palestrante\">\n                    </div>\n                    \n                    <div class=\"text-center mt-5\">\n                        <button type=\"submit\" class=\"btn btn-outline-primary bg-darke bg-dark mr-2\">Salvar</button>\n                        <button type=\"#\" class=\"btn btn-outline-primary bg-dark bg-dark\">Voltar</button>\n                    </div>                \n\n                </form> \n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n        <div class=\"container criar-centro \">\n            <div class=\"col-md-12\">  \n\n                <h4 class=\"text-center mt-5\">Cadastro de Tech-Shots</h4>\n\n                <form class=\"col-md-8 offset-md-2 mt-2\" action=\"/techshots\" method=\"POST\">\n                                                    \n                    <div class=\"form-group mt-5\">\n                        <label for=\"tituloTechShot\">Titulo da Tech Shot</label>\n                        <input type=\"text\" class=\"form-control\" name=\"titulo\" id=\"titulo\" placeholder=\"Titulo da TechShot\">\n                    </div>\n                    \n                    <div class=\"form-group\">\n                        <label for=\"cadTechShots\">Descrição</label>\n                        <textarea class=\"form-control\" name=\"descricao\" id=\"descricao\" rows=\"3\"></textarea>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"palestrante\">Palestrante</label>\n                        <input type=\"text\" class=\"form-control\" name=\"palestrante\" id=\"palestrante\" placeholder=\"Nome do Palestrante\">\n                    </div>\n                    \n                    <div class=\"text-center mt-5\">\n                        <button type=\"submit\" class=\"btn btn-outline-primary bg-darke bg-dark mr-2\" (click)=\"cadastrarTechShots()\">Salvar</button>\n                        <button type=\"#\" class=\"btn btn-outline-primary bg-dark bg-dark\" (click)=\"cancelarCadastro()\">Voltar</button>\n                    </div>                \n\n                </form> \n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div class=\"\">\n    <div class=\"container mt-2S\">\n       
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container col-md-12 mt-3\">\n  <div class=\"col-md-6 offset-md-3\">\n    \n    <form class=\"mt-5 \">\n      <h3 class=\"text-center\">Cadastro de Usuário</h3>\n\n      <div class=\"form-group\">\n          <label for=\"nome\">Nome</label>\n          <input type=\"text\" class=\"form-control\" id=\"nome\" placeholder=\"Nome\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"email\">Email</label>\n          <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Senha</label>\n          <input type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\n      </div>\n\n      <div class=\"row col\">\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">Usuário</label>\n          </div>\n          <div class=\"form-check col-md-6 text-center\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n              <label class=\"form-check-label\" for=\"exampleRadios2\">Administrador</label>\n          </div>\n      </div>\n      <div class=\"text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark bg-dark\">Cadastrar</button>\n      </div>                \n\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"container col-md-12 mt-3\">\n  <div class=\"col-md-6 offset-md-3\">\n    \n    <div class=\"mt-5 \">\n      <h3 class=\"text-center\">Cadastro de Usuário</h3>\n\n      <div class=\"form-group\">\n          <label for=\"nome\">Nome</label>\n          <input [(ngModel)]=\"usuario.nome\" type=\"text\" class=\"form-control\" id=\"nome\" placeholder=\"Nome\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"email\">Email</label>\n          <input [(ngModel)]=\"usuario.email\" type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\n      </div>\n      <div class=\"form-group\">\n          <label for=\"exampleInputPassword1\">Senha</label>\n          <input [(ngModel)]=\"usuario.senha\" type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\n      </div>\n\n      <div class=\"row col\">\n          <div class=\"form-check col-md-6 text-center\">\n              <input [(ngModel)]=\"usuario.tipoUsuario\" class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"usuario\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">Usuário</label>\n          </div>\n          <div class=\"form-check col-md-6 text-center\">\n              <input [(ngModel)]=\"usuario.tipoUsuario\" class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"admin\">\n              <label class=\"form-check-label\" for=\"exampleRadios2\">Administrador</label>\n          </div>\n      </div>\n      <div class=\"text-center mt-5\">\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark bg-dark\" (click)=\"cadastrarUsuario()\">Cadastrar</button>\n      </div>                \n\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "\n<div class=\"container\">\n  <div class=\"text-center\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container mt-3\">\n  <div class=\"col-md-12\">\n\n    <div class=\"container col-md-12 mt-5\">\n        \n      <h4 class=\"text-center\">Tech Shots mais votadas.</h4>                 \n\n      <div class=\"row mt-3\">\n        <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-6\">\n          <div class=\"card\">\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">Titulo: {{tech.titulo}}</h5>\n              <p class=\"card-text\">Id: {{tech.id}}</p>\n              <p class=\"card-text\">Descrição: {{tech.descricao}}</p>\n              <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p>\n              <p class=\"card-title\">Quantidade de votos: {{tech.numeroVotos}}</p>\n            </div>\n          </div>\n        </div>                                   \n      </div>          \n    </div>            \n  </div>  \n</div>\n"
+module.exports = "<div class=\"container mt-3\">\n  <div class=\"col-md-12\">\n\n    <div class=\"container col-md-12 mt-5\">\n        \n      <h4 class=\"text-center\">Tech Shots mais votadas.</h4>                 \n\n      <div class=\"row mt-3\">\n        <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-4\">\n          <div class=\"card\">\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">Titulo: {{tech.titulo}}</h5>\n              <p class=\"card-text\">Id: {{tech.id}}</p>\n              <p class=\"card-text\">Descrição: {{tech.descricao}}</p>\n              <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p>\n              <p class=\"card-title\">Quantidade de votos: {{tech.numeroVotos}}</p>\n            </div>\n          </div>\n        </div>                                   \n      </div>          \n    </div>            \n  </div>  \n</div>\n"
 
 /***/ }),
 
@@ -85,7 +85,7 @@ module.exports = "<div class=\"container mt-3\">\n  <div class=\"col-md-12\">\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-10 container \">\r\n    <div class=\"col-md-6 offset-md-3 login-centro\">\r\n      \r\n      <h3 class=\"text-center mt-5\">Login de Usuário</h3>\r\n\r\n      <div class=\"mt-2\">\r\n        <div class=\"form-group mt-5\">\r\n          <label for=\"email\">Email</label>\r\n          <input [(ngModel)]=\"usuario.nome\" type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Senha</label>\r\n          <input [(ngModel)]=\"usuario.senha\" type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\r\n        </div>\r\n        <a class=\"text-dark\" [routerLink]=\"['cadastrar-usuarios']\">Cadastrar-se?</a>\r\n        <div class=\"text-center mt-5\">\r\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark\" (click)=\"fazerLogin()\">Logar</button>\r\n        </div>                \r\n        \r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<div class=\"col-md-10 container \">\r\n    <div class=\"col-md-6 offset-md-3 login-centro\">\r\n      \r\n      <h3 class=\"text-center mt-5\">Login de Usuário</h3>\r\n\r\n      <div class=\"mt-2\">\r\n        <div class=\"form-group mt-5\">\r\n          <label for=\"email\">Email</label>\r\n          <input [(ngModel)]=\"usuario.nome\" type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"senha\">Senha</label>\r\n          <input [(ngModel)]=\"usuario.senha\" type=\"password\" class=\"form-control\" id=\"senha\" placeholder=\"Senha\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"tipousuario\">usuario/admin</label>\r\n          <input [(ngModel)]=\"usuario.tipoUsuario\" type=\"tipousuario\" class=\"form-control\" id=\"tipousuario\" placeholder=\"tipousuario\">\r\n        </div>\r\n        <!-- <a class=\"text-dark\" [routerLink]=\"['cadastrar-usuarios']\">Cadastrar-se?</a> -->\r\n        <div class=\"text-center mt-5\">\r\n          <button type=\"submit\" class=\"btn btn-outline-primary bg-dark\" (click)=\"fazerLogin()\">Logar</button>\r\n        </div>                \r\n        \r\n      </div>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
@@ -96,7 +96,7 @@ module.exports = "<div class=\"col-md-10 container \">\r\n    <div class=\"col-m
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"container mt-2S\">\r\n  <div class=\"col-md-12\">\r\n    \r\n\r\n    <div class=\"container col-md-12 mt-5\">\r\n        \r\n        <h4 class=\"text-center\">Votar na Tech Shots favorita.</h4>                \r\n\r\n        <div class=\"row mt-3\">\r\n            <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-6\">\r\n                <div class=\"card mb-3\">\r\n                    <div class=\"card-body\">\r\n                        <h4 class=\"card-title\">Titulo: {{tech.titulo}}</h4>\r\n                        <p class=\"card-text\">Id: {{tech.id}}</p>\r\n                        <p class=\"card-text\">Descrição: {{tech.descricao}}</p>\r\n                        <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p> \r\n                        <a href=\"#\" class=\"btn btn-outline-primary bg-dark text-center\">Votar</a>                   \r\n                    </div>                    \r\n                </div>\r\n            </div>                                     \r\n        </div>        \r\n    </div>\r\n  </div>  \r\n</div>"
+module.exports = "\r\n<div class=\"container mt-2S\">\r\n  <div class=\"col-md-12\">\r\n    \r\n\r\n    <div class=\"container col-md-12 mt-5\">\r\n        \r\n        <h4 class=\"text-center\">Votar na Tech Shots favorita.</h4>                \r\n\r\n        <div class=\"row mt-3\">\r\n            <div *ngFor=\"let tech of listatechshots\" class=\"col-sm-12\">\r\n                <div class=\"card mb-3\">\r\n                    <div class=\"card-body\">\r\n                        <h4 class=\"card-title\">{{tech.titulo}}</h4>\r\n                        <p class=\"card-text\">Numero: {{tech.id}}</p>\r\n                        <p class=\"card-text\">{{tech.descricao}}</p>\r\n                        <p class=\"card-title\">Palestrante: {{tech.palestrante}}</p> \r\n                        \r\n                        <button type=\"submit\" class=\"btn btn-outline-primary bg-dark text-center\" (click)=\"votarTech()\">Votar</button>                   \r\n                    </div>                    \r\n                </div>\r\n            </div>                                     \r\n        </div>        \r\n    </div>\r\n  </div>  \r\n</div>"
 
 /***/ }),
 
@@ -135,12 +135,15 @@ let AppComponent = class AppComponent {
         this.mostrarCriar = false;
         this.mostrarVotar = false;
         this.mostrarListar = false;
+        this.mostrarCadUsu = false;
     }
+    // tslint:disable-next-line:use-lifecycle-interface
     ngOnInit() {
         this.authService.mostrarMenuEmitter.subscribe(mostrar => this.mostrarMenu = mostrar);
         this.authService.mostrarCriarEmitter.subscribe(mostrar => this.mostrarCriar = mostrar);
         this.authService.mostrarVotarEmitter.subscribe(mostrar => this.mostrarVotar = mostrar);
         this.authService.mostrarListarEmitter.subscribe(mostrar => this.mostrarListar = mostrar);
+        this.authService.mostrarCadUsuEmitter.subscribe(mostrar => this.mostrarCadUsu = mostrar);
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -167,21 +170,23 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guards/auth.guards */ "./src/app/guards/auth.guards.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _login_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login/auth.service */ "./src/app/login/auth.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
-/* harmony import */ var _listar_techshots_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./listar-techshots.service */ "./src/app/listar-techshots.service.ts");
-/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
-/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
-/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _login_listar_usuarios_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login/listar-usuarios.service */ "./src/app/login/listar-usuarios.service.ts");
+/* harmony import */ var _guards_auth_guards__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./guards/auth.guards */ "./src/app/guards/auth.guards.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _login_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/auth.service */ "./src/app/login/auth.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./votar-techshots/votar-techshots.component */ "./src/app/votar-techshots/votar-techshots.component.ts");
+/* harmony import */ var _listar_techshots_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./listar-techshots.service */ "./src/app/listar-techshots.service.ts");
+/* harmony import */ var _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./listar-techshots/listar-techshots.component */ "./src/app/listar-techshots/listar-techshots.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./cadastrar-usuarios/cadastrar-usuarios.component */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.ts");
+/* harmony import */ var _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./cadastrar-techshots/cadastrar-techshots.component */ "./src/app/cadastrar-techshots/cadastrar-techshots.component.ts");
+/* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+
 
 
 
@@ -201,28 +206,29 @@ __webpack_require__.r(__webpack_exports__);
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["NgModule"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_7__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-            _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_8__["VotarTechshotsComponent"],
-            _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_10__["ListarTechshotsComponent"],
-            _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
-            _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_12__["CadastrarUsuariosComponent"],
-            _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_13__["CadastrarTechshotsComponent"],
-            _home_home_component__WEBPACK_IMPORTED_MODULE_15__["HomeComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
+            _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_9__["VotarTechshotsComponent"],
+            _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_11__["ListarTechshotsComponent"],
+            _login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
+            _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_13__["CadastrarUsuariosComponent"],
+            _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_14__["CadastrarTechshotsComponent"],
+            _home_home_component__WEBPACK_IMPORTED_MODULE_16__["HomeComponent"]
         ],
         imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-            _app_routing__WEBPACK_IMPORTED_MODULE_14__["routing"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["BrowserModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+            _app_routing__WEBPACK_IMPORTED_MODULE_15__["routing"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
         ],
         providers: [
-            _listar_techshots_service__WEBPACK_IMPORTED_MODULE_9__["ListarTechshotsService"],
-            _login_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
-            _guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]
+            _listar_techshots_service__WEBPACK_IMPORTED_MODULE_10__["ListarTechshotsService"],
+            _login_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"],
+            _guards_auth_guards__WEBPACK_IMPORTED_MODULE_2__["AuthGuards"],
+            _login_listar_usuarios_service__WEBPACK_IMPORTED_MODULE_1__["ListarUsuariosService"]
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
     })
 ], AppModule);
 
@@ -260,7 +266,7 @@ const APP_ROUTES = [
     { path: 'listar-techshots', component: _listar_techshots_listar_techshots_component__WEBPACK_IMPORTED_MODULE_3__["ListarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
     { path: 'votar-techshots', component: _votar_techshots_votar_techshots_component__WEBPACK_IMPORTED_MODULE_4__["VotarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
     { path: 'cadastrar-techshots', component: _cadastrar_techshots_cadastrar_techshots_component__WEBPACK_IMPORTED_MODULE_5__["CadastrarTechshotsComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
-    { path: 'cadastrar-usuarios', component: _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_2__["CadastrarUsuariosComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] },
+    { path: 'cadastrar-usuarios', component: _cadastrar_usuarios_cadastrar_usuarios_component__WEBPACK_IMPORTED_MODULE_2__["CadastrarUsuariosComponent"] },
     { path: 'login', component: _login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
     { path: '', component: _home_home_component__WEBPACK_IMPORTED_MODULE_0__["HomeComponent"], canActivate: [_guards_auth_guards__WEBPACK_IMPORTED_MODULE_1__["AuthGuards"]] }
 ];
@@ -292,12 +298,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CadastrarTechshotsComponent", function() { return CadastrarTechshotsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _techshot_models__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./techshot-models */ "./src/app/cadastrar-techshots/techshot-models.ts");
+
 
 
 let CadastrarTechshotsComponent = class CadastrarTechshotsComponent {
-    constructor() { }
+    constructor() {
+        this.techShot = new _techshot_models__WEBPACK_IMPORTED_MODULE_2__["TechShot"]();
+    }
     ngOnInit() {
     }
+    // cadastro de tech shots
+    cadastrarTechShots() { }
+    // cancelamento de cadastro tech shots
+    cancelarCadastro() { }
 };
 CadastrarTechshotsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -308,6 +322,22 @@ CadastrarTechshotsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], CadastrarTechshotsComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/cadastrar-techshots/techshot-models.ts":
+/*!********************************************************!*\
+  !*** ./src/app/cadastrar-techshots/techshot-models.ts ***!
+  \********************************************************/
+/*! exports provided: TechShot */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TechShot", function() { return TechShot; });
+class TechShot {
+}
 
 
 /***/ }),
@@ -334,16 +364,23 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CadastrarUsuariosComponent", function() { return CadastrarUsuariosComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _usuario_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./usuario-models */ "./src/app/cadastrar-usuarios/usuario-models.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
 
 
 let CadastrarUsuariosComponent = class CadastrarUsuariosComponent {
-    constructor() { }
+    constructor() {
+        this.usuario = new _usuario_models__WEBPACK_IMPORTED_MODULE_1__["Usuario"]();
+    }
     ngOnInit() {
+    }
+    cadastrarUsuario() {
+        console.log(this.usuario);
     }
 };
 CadastrarUsuariosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-cadastrar-usuarios',
         template: __webpack_require__(/*! raw-loader!./cadastrar-usuarios.component.html */ "./node_modules/raw-loader/index.js!./src/app/cadastrar-usuarios/cadastrar-usuarios.component.html"),
         styles: [__webpack_require__(/*! ./cadastrar-usuarios.component.css */ "./src/app/cadastrar-usuarios/cadastrar-usuarios.component.css")]
@@ -351,6 +388,22 @@ CadastrarUsuariosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], CadastrarUsuariosComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/cadastrar-usuarios/usuario-models.ts":
+/*!******************************************************!*\
+  !*** ./src/app/cadastrar-usuarios/usuario-models.ts ***!
+  \******************************************************/
+/*! exports provided: Usuario */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Usuario", function() { return Usuario; });
+class Usuario {
+}
 
 
 /***/ }),
@@ -552,6 +605,7 @@ let AuthService = class AuthService {
         this.mostrarCriarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.mostrarVotarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.mostrarListarEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.mostrarCadUsuEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     fazerLogin(usuario) {
         if (usuario.nome === 'gngelo@gmail.com' &&
@@ -561,6 +615,7 @@ let AuthService = class AuthService {
                 this.mostrarMenuEmitter.emit(true);
                 this.mostrarVotarEmitter.emit(true);
                 this.mostrarListarEmitter.emit(true);
+                this.mostrarCadUsuEmitter.emit(false);
                 this.router.navigate(['/']);
             }
             if (usuario.tipoUsuario === 'admin') {
@@ -568,6 +623,7 @@ let AuthService = class AuthService {
                 this.mostrarMenuEmitter.emit(true);
                 this.mostrarCriarEmitter.emit(true);
                 this.mostrarListarEmitter.emit(true);
+                this.mostrarCadUsuEmitter.emit(false);
                 this.router.navigate(['/']);
             }
         }
@@ -577,6 +633,7 @@ let AuthService = class AuthService {
             this.mostrarCriarEmitter.emit(false);
             this.mostrarVotarEmitter.emit(false);
             this.mostrarListarEmitter.emit(false);
+            this.mostrarCadUsuEmitter.emit(true);
         }
     }
     usuarioEstaAutenticado() {
@@ -589,6 +646,42 @@ AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
 ], AuthService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/login/listar-usuarios.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/login/listar-usuarios.service.ts ***!
+  \**************************************************/
+/*! exports provided: ListarUsuariosService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListarUsuariosService", function() { return ListarUsuariosService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+
+let ListarUsuariosService = class ListarUsuariosService {
+    constructor(http) {
+        this.http = http;
+        this.usuariosUrl = 'https://virtserver.swaggerhub.com/pucmg/techshot/1.0.0/usuarios';
+    }
+    logarGet(logar) {
+        return this.http.get(this.usuariosUrl, logar);
+    }
+};
+ListarUsuariosService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], ListarUsuariosService);
 
 
 
@@ -618,7 +711,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ "./src/app/login/auth.service.ts");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _usuario__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./usuario */ "./src/app/login/usuario.ts");
+/* harmony import */ var _cadastrar_usuarios_usuario_models__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../cadastrar-usuarios/usuario-models */ "./src/app/cadastrar-usuarios/usuario-models.ts");
 
 
 
@@ -626,9 +719,10 @@ __webpack_require__.r(__webpack_exports__);
 let LoginComponent = class LoginComponent {
     constructor(authService) {
         this.authService = authService;
-        this.usuario = new _usuario__WEBPACK_IMPORTED_MODULE_3__["Usuario"]();
+        this.usuario = new _cadastrar_usuarios_usuario_models__WEBPACK_IMPORTED_MODULE_3__["Usuario"]();
     }
     ngOnInit() {
+        this.fazerLogin();
     }
     fazerLogin() {
         this.authService.fazerLogin(this.usuario);
@@ -643,25 +737,6 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
 ], LoginComponent);
 
-
-
-/***/ }),
-
-/***/ "./src/app/login/usuario.ts":
-/*!**********************************!*\
-  !*** ./src/app/login/usuario.ts ***!
-  \**********************************/
-/*! exports provided: Usuario */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Usuario", function() { return Usuario; });
-class Usuario {
-    constructor() {
-        this.tipoUsuario = 'admin';
-    }
-}
 
 
 /***/ }),
@@ -700,9 +775,12 @@ let VotarTechshotsComponent = class VotarTechshotsComponent {
     ngOnInit() {
         this.listar();
     }
+    // listar todas as techshots para serem votada
     listar() {
         this.listarTechshotsService.listarTechhosts().subscribe(dados => this.listatechshots = dados);
     }
+    // vota na techshot preferida
+    votarTech() { }
 };
 VotarTechshotsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

@@ -13,6 +13,7 @@ export class AppComponent {
   mostrarCriar = false;
   mostrarVotar = false;
   mostrarListar = false;
+  mostrarEditar = false;
   mostrarCadUsu = false;
 
   constructor( private authService: AuthService ) {}
@@ -30,6 +31,9 @@ export class AppComponent {
     );
     this.authService.mostrarListarEmitter.subscribe(
       mostrar => this.mostrarListar = mostrar
+    );
+    this.authService.mostrarEditarEmitter.subscribe(
+      mostrar => this.mostrarEditar = mostrar
     );
     this.authService.mostrarCadUsuEmitter.subscribe(
       mostrar => this.mostrarCadUsu = mostrar
