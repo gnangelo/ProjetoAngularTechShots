@@ -74,7 +74,7 @@ module.exports = "\n<div class=\"container mt-3\">\n  <div class=\"col-md-12\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div class=\"text-center\">\n    <h1>Bem vindo ao Tech Shots!</h1>\n    <h5>O você deseja fazer?</h5>\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"container\">\n  <div class=\"text-center\">\n    <h1>Bem vindo ao Tech Shots!</h1>\n    <h5>O que você deseja fazer?</h5>\n  </div>\n</div>\n"
 
 /***/ }),
 
