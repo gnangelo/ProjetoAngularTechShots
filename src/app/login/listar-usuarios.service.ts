@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ListarUsuariosService {
 
-  usuariosUrl = 'https://virtserver.swaggerhub.com/pucmg/techshot/1.0.0/usuarios';
+  usuariosUrl = 'http://localhost:8086/api/v1/usuarios';
 
   constructor( private http: HttpClient ) { }
 

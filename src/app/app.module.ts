@@ -1,3 +1,4 @@
+import { EditarService } from './editar-techshots/editar.service';
 import { ListarUsuariosService } from './login/listar-usuarios.service';
 import { AuthGuards } from './guards/auth.guards';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +41,8 @@ import { EditarTechshotsComponent } from './editar-techshots/editar-techshots.co
     ListarTechshotsService,
     AuthService,
     AuthGuards,
-    ListarUsuariosService
+    ListarUsuariosService,
+    EditarService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,4 @@
+import { EditarService } from './editar.service';
 import { ListarTechshotsService } from './../listar-techshots.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,14 +11,18 @@ export class EditarTechshotsComponent implements OnInit {
 
   listatechshots: Array<any>;
 
-  constructor( private listarTechshotsService: ListarTechshotsService ) { }
+  constructor( private listarTechshotsService: ListarTechshotsService, editarService: EditarService ) { }
 
   ngOnInit() {
-    this.listar();
+    console.log(this.listar());
   }
 
   listar() {
-    this.listarTechshotsService.listarTechhosts().subscribe(dados => this.listatechshots = dados);
+    this.listarTechshotsService.listarTechShosts().subscribe(dados => this.listatechshots = dados);
   }
+
+  editarTechShot() {}
+
+  apagarTechShot() {}
 
 }

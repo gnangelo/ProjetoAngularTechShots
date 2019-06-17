@@ -5,20 +5,20 @@
 
                 <h4 class="text-center mt-5">Cadastro de Tech-Shots</h4>
 
-                <form class="col-md-8 offset-md-2 mt-2" action="/techshots" method="POST">
+                <div class="col-md-8 offset-md-2 mt-2">
                                                     
                     <div class="form-group mt-5">
                         <label for="tituloTechShot">Titulo da Tech Shot</label>
-                        <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Titulo da TechShot">
+                        <input [(ngModel)]="techShot.titulo" type="text" class="form-control" name="titulo" id="titulo" placeholder="Titulo da TechShot">
                     </div>
                     
                     <div class="form-group">
                         <label for="cadTechShots">Descrição</label>
-                        <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>
+                        <textarea [(ngModel)]="techShot.descricao" class="form-control" name="descricao" id="descricao" rows="3"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="palestrante">Palestrante</label>
-                        <input type="text" class="form-control" name="palestrante" id="palestrante" placeholder="Nome do Palestrante">
+                        <input [(ngModel)]="techShot.palestrante" type="text" class="form-control" name="palestrante" id="palestrante" placeholder="Nome do Palestrante">
                     </div>
                     
                     <div class="text-center mt-5">
@@ -26,7 +26,7 @@
                         <button type="#" class="btn btn-outline-primary bg-dark bg-dark" (click)="cancelarCadastro()">Voltar</button>
                     </div>                
 
-                </form> 
+                </div> 
             </div>
         </div>
     </div>

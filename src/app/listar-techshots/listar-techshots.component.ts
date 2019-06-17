@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarTechshotsComponent implements OnInit {
 
-  listatechshots: Array<any>;
+  listatechshots: {};
 
   constructor( private listarTechshotsService: ListarTechshotsService ) { }
 
@@ -17,7 +17,7 @@ export class ListarTechshotsComponent implements OnInit {
   }
 
   listar() {
-    this.listarTechshotsService.listarTechhosts().subscribe(dados => this.listatechshots = dados);
+    this.listarTechshotsService.listarTechShosts().subscribe(dados => this.listatechshots = dados);
   }
 
 }

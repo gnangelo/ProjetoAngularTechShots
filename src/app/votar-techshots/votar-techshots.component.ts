@@ -46,7 +46,7 @@ export class VotarTechshotsComponent implements OnInit {
 
   // listar todas as techshots para serem votada
   listar() {
-    this.listarTechshotsService.listarTechhosts().subscribe(dados => this.listatechshots = dados);
+    this.listarTechshotsService.listarTechShosts().subscribe(dados => this.listatechshots = dados);
   }
 
   // vota na techshot preferida
